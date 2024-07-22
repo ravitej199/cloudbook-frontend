@@ -1,0 +1,68 @@
+.notes-container {
+    transition: filter 0.3s ease;
+  }
+  
+  .blur {
+    filter: blur(5px);
+  }
+  
+  .edit-container,
+  .add-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 70%;
+    font-size:larger;
+  }
+  
+  .edit-container h2,
+  .add-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .edit-container input,
+  .edit-container textarea,
+  .add-container input,
+  .add-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .edit-container button,
+  .add-container button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-container button:hover,
+  .add-container button:hover {
+    background: #f0f0f0;
+  }
+  
+  .filter-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%;
+    font-size: 23px;
+  }
+  
+  .tags {
+    margin-top: 10px;
+    font-size: 23px;
+    color: #777;
+  }
+  
