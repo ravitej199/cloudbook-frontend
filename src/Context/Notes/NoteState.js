@@ -41,8 +41,10 @@ const  NoteState = (props) =>{
     hide : false
    })
 
+   const [LoggedIn, setLoggedIn] = useState(false)
+
     return(
-        <NoteContext.Provider value={{ AlertState, setAlertState}}>
+        <NoteContext.Provider value={{ AlertState, setAlertState, LoggedIn, setLoggedIn}}>
             {props.children}
 
         </NoteContext.Provider>

@@ -1,9 +1,13 @@
 import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import NoteContext from '../Context/Notes/noteContext';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
 function Login() {
+
+const {setLoggedIn} = useContext(NoteContext)
 
 const navigate = useNavigate();
   const [loginUser, setloginUser] = useState({
@@ -53,6 +57,7 @@ const navigate = useNavigate();
       toast.success("Login Successful");
       localStorage.setItem('token',res.token);
       navigate("/notes");
+      setLoggedIn(true);
 
       }
     }catch (error) {
@@ -88,24 +93,28 @@ const navigate = useNavigate();
 
 
   return (
-    <div className=' flex justify-center items-center flex-col mt-[10%]'>
-        <p className='font-semibold text-[60px] my-4'>Login</p>
-      <form onSubmit={handleSubmit}>
-  <div className="mb-3">
-    <label htmlFor="email" className="form-label text-[20px]">Email address</label>
-    <input type="email" name='email' value={loginUser.email} onChange={handleInput} required id='email' className="form-control" placeholder='enter your email' aria-describedby="emailHelp"/>
+    <div className=' flex justify-center items-center flex-col  px-4 min-h-screen '>
+        <p className='font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-4'>Login</p>
+      <form onSubmit={handleSubmit} className="w-full max-w-md">
+  <div className="mb-4">
+    <label htmlFor="email" className="form-label text-lg sm:text-xl md:text-2xl">Email address</label>
+    <input type="email" name='email' value={loginUser.email} onChange={handleInput} required id='email' className="form-control w-full px-3 py-2 border rounded-md text-base" placeholder='enter your email' aria-describedby="emailHelp"/>
 
   </div>
   <div className="mb-3">
-    <label htmlFor="exampleInputPassword1" className="form-label text-[20px]">Password</label>
-    <input type="password" name='password' required className="form-control" id="password" value={loginUser.password} onChange={handleInput} placeholder='enter your email'/>
+    <label htmlFor="exampleInputPassword1" className="form-label text-lg sm:text-xl md:text-2xl">Password</label>
+    <input type="password" name='password' required className="form-control form-control w-full px-3 py-2 border rounded-md text-base" id="password" value={loginUser.password} onChange={handleInput} placeholder='enter your email'/>
   </div>
-  <button type="submit" className="btn btn-primary" >Submit</button>
-</form>
-<p ref={responseMessage} className='text-red-500 mt-3'></p>
-<button onClick={goBack} className="bg-[#F8F9FA] absolute rounded-lg -bottom-16 left-[35%]  py-2 px-3 text-[20px] text-black  font-semibold hover:cursor-pointer">
+  <div className="buttons flex flex-col sm:flex-row justify-between mt-6 gap-4">
+  <button onClick={goBack} className="bg-gray-200 rounded-lg py-2 px-4 text-lg text-black font-semibold hover:bg-gray-300 transition duration-200">
       <FontAwesomeIcon icon={faArrowLeft} /> Back
     </button>
+  <button type="submit" className="bg-blue-600 text-white rounded-lg py-2 px-4 text-lg font-semibold hover:bg-blue-700 transition duration-200" >Submit</button>
+  
+  </div>
+</form>
+<p ref={responseMessage} className='text-red-500 mt-3'></p>
+
     </div>
   )
 }
