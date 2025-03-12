@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# CloudBook - Portfolio Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CloudBook is a **full-stack web application** built using **React.js** for the frontend and **Node.js with Express.js** for the backend. This project showcases my skills in building a **modern, scalable web application** with database integration, API development, and responsive UI design.
 
-## Available Scripts
+## Key Features
+- **User Authentication**: Secure login and signup system.
+- **Content Management**: Users can create, edit, and manage content.
+- **Database Integration**: Stores user and content data efficiently.
+- **REST API Development**: Backend services designed using Express.js.
+- **Responsive UI**: Built with Tailwind CSS for a seamless experience on all devices.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+### **Frontend**
+- React.js (for dynamic UI rendering)
+- Tailwind CSS (for styling and responsiveness)
+- JavaScript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Backend**
+- Node.js (runtime environment)
+- Express.js (server-side framework)
+- MongoDB (database for storing user data and content)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation & Setup
 
-### `npm test`
+### **Backend Setup**
+1. Navigate to the backend folder:
+   ```sh
+   cd cloudbook-backend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the backend server:
+   ```sh
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Frontend Setup**
+1. Navigate to the frontend folder:
+   ```sh
+   cd cloudbook-frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend server:
+   ```sh
+   npm start
+   ```
 
-### `npm run build`
+## Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Backend (`cloudbook-backend`)**
+- `index.js` - Entry point of the backend server.
+- `db.js` - Handles database connection.
+- `routes/` - Contains API routes.
+- `models/` - Database models.
+- `Middleware/` - Authentication and request-handling middleware.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Frontend (`cloudbook-frontend`)**
+- `src/` - Contains React components and main application logic.
+- `public/` - Static assets.
+- `.env` - Environment variables.
+- `tailwind.config.js` - Tailwind CSS configuration.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Why This Project?
+This project demonstrates my ability to:
+- Build a **scalable full-stack application** from scratch.
+- Implement **secure authentication mechanisms**.
+- Develop and manage a **RESTful API**.
+- Design a **responsive and user-friendly UI**.
+- Integrate **MongoDB as a database solution**.
 
-### `npm run eject`
+## Deployment (Optional)
+This project can be deployed using **Vercel (Frontend)** and **Railway (Backend)** for seamless hosting.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contribution
+Feel free to contribute by opening issues or submitting pull requests.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
+This project is licensed under MIT License.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
